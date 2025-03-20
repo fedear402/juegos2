@@ -1,1 +1,1 @@
-web: gunicorn --worker-tmp-dir /dev/shm --config gunicorn_config.py app:app
+gunicorn "app:create_app()" --workers 2 --bind 0.0.0.0:8080
